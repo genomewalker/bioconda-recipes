@@ -1,0 +1,41 @@
+{% set version = "1.0.4" %}
+{% set sha256 = "cf975438e678e54bb62d3d5bdeb37f6cb06751fd5248ba639edf54249047aff1" %}
+
+package:
+  name: metadmg
+  version: {{ version }}
+
+source:
+  url: https://github.com/genomewalker/metaDMG-cpp/archive/bioconda.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - make
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+  host:
+    - zlib
+    - bzip2
+    - xz
+    - htslib
+    - gsl
+  run:
+    - htslib
+    - zlib
+    - bzip2
+    - xz
+    - gsl
+
+test:
+  commands:
+    - metaDMG-cpp 2>&1 | grep 'metaDMG-cpp'
+
+about:
+  home: https://github.com/metaDMG-dev/metaDMG-cpp
+  license: GPLv3, MIT
+  license_file: LICENSE
+  summary: "metaDMG-cpp: fast and efficient method for estimating mutation and damage rates in ancient DNA data"
