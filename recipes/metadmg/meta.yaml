@@ -23,12 +23,14 @@ requirements:
     - xz
     - htslib
     - gsl
+    - eigen
   run:
     - htslib
     - zlib
     - bzip2
     - xz
     - gsl
+    - eigen
 
 test:
   commands:
