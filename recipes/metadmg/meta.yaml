@@ -1,5 +1,5 @@
 {% set version = "1.0.4" %}
-{% set sha256 = "cf975438e678e54bb62d3d5bdeb37f6cb06751fd5248ba639edf54249047aff1" %}
+{% set sha256 = "1435f99aad2dfb9a0ecba933984f3d960eeab57e53d687cb501160d7019576d1" %}
 
 package:
   name: metadmg
