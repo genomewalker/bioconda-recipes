@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/RAHenriksen/NGSNGS/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/RAHenriksen/NGSNGS/archive/refs/tags/v.{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -24,8 +24,7 @@ requirements:
     - htslib
   run:
     - htslib
-    - zlib
-    - bzip2
+    - libcurl
     - xz
 
 test:
@@ -35,5 +34,5 @@ test:
 about:
   home: https://github.com/RAHenriksen/NGSNGS
   license: MIT
-  license_file: LICENSE
+  #license_file: LICENSE
   summary: "NGSNGS: Next generation simulator for next generation sequencing data"
