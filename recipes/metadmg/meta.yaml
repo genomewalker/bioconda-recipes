@@ -34,7 +34,7 @@ requirements:
 
 test:
   commands:
-    - metaDMG-cpp 2>&1 | grep 'metaDMG-cpp'
+    - metadamage 2>&1 | grep 'metadamage'
 
 about:
   home: https://github.com/metaDMG-dev/metaDMG-cpp
