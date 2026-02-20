@@ -7,7 +7,8 @@ cd build
 cmake .. \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
-    -DCMAKE_PREFIX_PATH="${PREFIX}"
+    -DCMAKE_PREFIX_PATH="${PREFIX}" \
+    -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG -funroll-loops"
 
 make -j"${CPU_COUNT}"
 
